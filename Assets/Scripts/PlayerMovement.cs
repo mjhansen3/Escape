@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float forwardForce = 800f;
     public float sidewaysForce = 50f;
-    public float swipeSidewaysForce = 100f;
+    public float swipeSidewaysForce = 200f;
     public Swipe swipeControls;
 
 
@@ -34,9 +34,12 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
-        if (rb.position.y < -1f)
+        if (rb.position.y < -0.1f)
         {
             FindObjectOfType<GameManager>().EndGame();
+            rb.AddForce(0, 0, 0 * Time.deltaTime);
+            FindObjectOfType<AudioManager>().PlaySound("DeathSound");
+            Destroy(gameObject);
         }
 
         tap = swipeLeft = swipeRight = swipeUp = swipeDown = false;

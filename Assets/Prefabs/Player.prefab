@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6711296555721032491}
   - component: {fileID: 6711296555721032480}
   - component: {fileID: 6711296555721032481}
+  - component: {fileID: 3318636487724618858}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &6711296555721032480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +126,8 @@ MonoBehaviour:
   rb: {fileID: 6711296555721032491}
   forwardForce: 1500
   sidewaysForce: 50
+  swipeSidewaysForce: 100
+  swipeControls: {fileID: 3318636487724618858}
 --- !u!114 &6711296555721032481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,4 +141,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 6711296555721032480}
-  gameManager: {fileID: 0}
+--- !u!114 &3318636487724618858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711296555721032490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196680e16264647e19e258ecaa123597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

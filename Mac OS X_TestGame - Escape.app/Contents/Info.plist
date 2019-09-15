@@ -26,11 +26,11 @@
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.games</string>
 	<key>CFBundleName</key>
-	<string>unityTry</string>
+	<string>Escape</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.1</string>
+	<string>0.5</string>
 	<key>CFBundleVersion</key>
 	<string>0</string>
 	<key>NSMainNibFile</key>
